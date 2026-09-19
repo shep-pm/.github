@@ -29,3 +29,4 @@ docs updated:
 - [ ] `cargo clippy --workspace --all-targets --all-features -- -D warnings`
 - [ ] `cargo test --workspace --all-features`
 - [ ] If this changes anything an operator types or sees, `web/` says so too. Regenerate with `./web/scripts/generate-cli-reference.sh`, then read the hand-written pages under `web/src/pages/docs/`, then run `npm ci && npx astro check && npm run build` from `web/`.
+- [ ] I can explain every line of this. Using an AI to write it is fine and common here. Opening a pull request you cannot answer questions about is not, whoever or whatever wrote it.
