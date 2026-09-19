@@ -1,0 +1,80 @@
+name: Code quality finding
+description: Duplication, a missing abstraction, a rough edge, or anything worth tidying.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Two parts below. The first is for people, the second is for the coding
+        agents and scripts that also read these issues.
+
+        One thing to get right before anything else: **name every site, not the
+        first few you found.** The single most common defect in these issues is
+        a list that stops early, so whoever picks it up fixes four of eleven and
+        the rest survive. Grep for the shape rather than the identifier, since a
+        sibling written by the same hand usually carries a different name.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What is worth changing
+      description: A few sentences. What repeats or reads badly, and why it matters.
+      placeholder: |
+        The four dog-action row types declare the same four fields and their
+        `Render` impls delegate identically, so a change to the shape has to be
+        made in four places.
+    validations:
+      required: true
+
+  - type: textarea
+    id: sites
+    attributes:
+      label: Every site
+      description: One per line, as `path/to/file.rs:LINE` or `:START-END`. Repo-relative.
+      render: text
+      placeholder: |
+        crates/shep-cli/src/output/rows/dogs.rs:152
+        crates/shep-cli/src/output/rows/dogs.rs:267
+        crates/shep-cli/src/output/rows/dogs.rs:315
+        crates/shep-cli/src/output/rows/dogs.rs:366
+    validations:
+      required: true
+
+  - type: textarea
+    id: checked
+    attributes:
+      label: How you checked the set is complete
+      description: |
+        The command you ran, so the next reader can repeat it. `jscpd` and
+        `similarity-rs` both work well here, and a grep for the shared fragment
+        works when the pattern is smaller than a detector's floor.
+      render: shell
+      placeholder: |
+        rg -n 'DogActionRow \{' crates/
+        similarity-rs --experimental-types --no-functions -t 0.7 crates/shep-cli
+    validations:
+      required: false
+
+  - type: textarea
+    id: precise
+    attributes:
+      label: Precise details
+      description: Read by automated tooling and by coding agents. Be exact rather than readable.
+      value: |
+        fix:
+        value:
+        breaking:
+        risks:
+        already shared:
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before filing
+      options:
+        - label: The copies duplicate a fact, rather than only looking alike. Two things that can change independently should stay two things.
+          required: false
+        - label: I checked whether the shared part is already factored out somewhere, and this is the remainder.
+          required: false
