@@ -228,7 +228,13 @@ def banner(palette: dict) -> str:
 # The flock map
 # --------------------------------------------------------------------------
 
-MAP_W, MAP_H = 880, 452
+MAP_W, MAP_H = 880, 470
+
+# Every label is sized against this 880-unit coordinate space, and GitHub then
+# stretches the whole thing to whatever the README column happens to be. That
+# column measured 574px in a 960px window and 846px in a 1440px one, so a label
+# drawn at 12 lands somewhere between 8px and 12px for the reader. Nothing here
+# goes below 14.
 
 
 def box(x, y, w, h, palette, accent):
@@ -250,40 +256,40 @@ def flock_map(palette: dict) -> str:
 <rect width="{MAP_W}" height="{MAP_H}" rx="14" fill="{palette['paper']}"/>
 
 <!-- what you drive -->
-{box(150, 24, 580, 74, palette, palette['butter'])}
-{mono(440, 54, 15, "shep  ·  lookout (TUI)  ·  whistle (MCP)  ·  JSON", palette['ink'], anchor="middle", weight="700")}
-{mono(440, 78, 12, "what you drive - one binary, every surface", palette['ink_3'], anchor="middle")}
+{box(150, 24, 580, 82, palette, palette['butter'])}
+{mono(440, 58, 17, "shep · lookout (TUI) · whistle (MCP) · JSON", palette['ink'], anchor="middle", weight="700")}
+{mono(440, 84, 14, "what you drive: one binary, every surface", palette['ink_3'], anchor="middle")}
 
-<line x1="440" y1="98" x2="440" y2="146" stroke="{wire}" stroke-width="2" marker-end="url(#head)"/>
-{mono(452, 128, 12, "control socket", palette['ink_3'])}
+<line x1="440" y1="106" x2="440" y2="158" stroke="{wire}" stroke-width="2" marker-end="url(#head)"/>
+{mono(452, 138, 14, "control socket", palette['ink_3'])}
 
 <!-- the shepherd -->
-{box(150, 150, 580, 82, palette, palette['accent'])}
-{sans(440, 186, 22, "the shepherd", palette['ink'], anchor="middle", weight="700")}
-{mono(440, 212, 12, "one daemon · re-execs itself to detach · never binds your sockets", palette['ink_3'], anchor="middle")}
+{box(150, 162, 580, 90, palette, palette['accent'])}
+{sans(440, 200, 24, "the shepherd", palette['ink'], anchor="middle", weight="700")}
+{mono(440, 230, 14, "one daemon · re-execs itself to detach · never binds your sockets", palette['ink_3'], anchor="middle")}
 
-<line x1="286" y1="232" x2="286" y2="290" stroke="{wire}" stroke-width="2" marker-end="url(#head)"/>
-{mono(296, 268, 12, "supervises", palette['ink_3'])}
-<line x1="594" y1="232" x2="594" y2="290" stroke="{wire}" stroke-width="2" marker-end="url(#head)"/>
-{mono(604, 268, 12, "supervises", palette['ink_3'])}
+<line x1="281" y1="252" x2="281" y2="310" stroke="{wire}" stroke-width="2" marker-end="url(#head)"/>
+{mono(293, 288, 14, "supervises", palette['ink_3'])}
+<line x1="599" y1="252" x2="599" y2="310" stroke="{wire}" stroke-width="2" marker-end="url(#head)"/>
+{mono(611, 288, 14, "supervises", palette['ink_3'])}
 
 <!-- the flock -->
-{box(150, 294, 272, 118, palette, palette['hill_front'])}
-{sans(170, 324, 18, "the flock", palette['ink'], weight="700")}
-{mono(170, 348, 12, "your long-running processes", palette['ink_3'])}
-{mono(170, 372, 13, "web   worker   cron", palette['ink_2'], weight="700")}
-{mono(170, 394, 12, "restarted, backed off, logged", palette['ink_3'])}
+{box(136, 314, 290, 132, palette, palette['hill_front'])}
+{sans(158, 348, 20, "the flock", palette['ink'], weight="700")}
+{mono(158, 376, 14, "your long-running processes", palette['ink_3'])}
+{mono(158, 402, 15, "web   worker   cron", palette['ink_2'], weight="700")}
+{mono(158, 428, 14, "restarted, backed off, logged", palette['ink_3'])}
 
 <!-- the dogs -->
-{box(458, 294, 272, 118, palette, palette['sun'])}
-{sans(478, 324, 18, "the dogs", palette['ink'], weight="700")}
-{mono(478, 348, 12, "plugins the shepherd runs", palette['ink_3'])}
-{mono(478, 372, 13, "metrics  bark  log-rotate", palette['ink_2'], weight="700")}
-{mono(478, 394, 12, "deploy, and any you write", palette['ink_3'])}
+{box(454, 314, 290, 132, palette, palette['sun'])}
+{sans(476, 348, 20, "the dogs", palette['ink'], weight="700")}
+{mono(476, 376, 14, "plugins the shepherd runs", palette['ink_3'])}
+{mono(476, 402, 15, "metrics  bark  log-rotate", palette['ink_2'], weight="700")}
+{mono(476, 428, 14, "deploy, and any you write", palette['ink_3'])}
 
 <!-- the shepherd channel, back up from a sheep -->
-<path d="M150 366 L96 366 L96 191 L150 191" fill="none" stroke="{wire}" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#head)"/>
-{mono(440, 438, 12, "a sheep answers back over the shepherd channel: readiness, metrics, custom actions", palette['ink_3'], anchor="middle")}
+<path d="M136 396 L88 396 L88 207 L150 207" fill="none" stroke="{wire}" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#head)"/>
+{mono(440, 462, 14, "a sheep answers back over the shepherd channel: readiness, metrics, custom actions", palette['ink_3'], anchor="middle")}
 </svg>
 """
 
