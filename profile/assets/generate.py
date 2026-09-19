@@ -228,7 +228,7 @@ def banner(palette: dict) -> str:
 # The flock map
 # --------------------------------------------------------------------------
 
-MAP_W, MAP_H = 880, 470
+MAP_W, MAP_H = 880, 478
 
 # Every label is sized against this 880-unit coordinate space, and GitHub then
 # stretches the whole thing to whatever the README column happens to be. That
@@ -256,7 +256,7 @@ def flock_map(palette: dict) -> str:
 <rect width="{MAP_W}" height="{MAP_H}" rx="14" fill="{palette['paper']}"/>
 
 <!-- what you drive -->
-{box(150, 24, 580, 82, palette, palette['butter'])}
+{box(136, 24, 608, 82, palette, palette['butter'])}
 {mono(440, 58, 17, "shep · lookout (TUI) · whistle (MCP) · JSON", palette['ink'], anchor="middle", weight="700")}
 {mono(440, 84, 14, "what you drive: one binary, every surface", palette['ink_3'], anchor="middle")}
 
@@ -264,7 +264,7 @@ def flock_map(palette: dict) -> str:
 {mono(452, 138, 14, "control socket", palette['ink_3'])}
 
 <!-- the shepherd -->
-{box(150, 162, 580, 90, palette, palette['accent'])}
+{box(136, 162, 608, 90, palette, palette['accent'])}
 {sans(440, 200, 24, "the shepherd", palette['ink'], anchor="middle", weight="700")}
 {mono(440, 230, 14, "one daemon · re-execs itself to detach · never binds your sockets", palette['ink_3'], anchor="middle")}
 
@@ -288,7 +288,7 @@ def flock_map(palette: dict) -> str:
 {mono(476, 428, 14, "deploy, and any you write", palette['ink_3'])}
 
 <!-- the shepherd channel, back up from a sheep -->
-<path d="M136 396 L88 396 L88 207 L150 207" fill="none" stroke="{wire}" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#head)"/>
+<path d="M136 396 L88 396 L88 207 L136 207" fill="none" stroke="{wire}" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#head)"/>
 {mono(440, 462, 14, "a sheep answers back over the shepherd channel: readiness, metrics, custom actions", palette['ink_3'], anchor="middle")}
 </svg>
 """
