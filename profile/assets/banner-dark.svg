@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" width="880" height="300" role="img" aria-label="shep: a process manager written in Rust. Three sheep graze on a hillside under a low sun.">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#0b1a2b"/>
+    <stop offset="1" stop-color="#131e18"/>
+  </linearGradient>
+  <radialGradient id="glow">
+    <stop offset="0" stop-color="#f6d072" stop-opacity="1"/>
+    <stop offset="1" stop-color="#f6d072" stop-opacity="0"/>
+  </radialGradient>
+  <clipPath id="frame"><rect width="880" height="300" rx="14"/></clipPath>
+</defs>
+<style>
+  .sheep { animation: bob 3.6s ease-in-out infinite; }
+  @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3.5px); } }
+  .cloud { animation: drift 74s linear infinite; }
+  @keyframes drift { from { transform: translateX(-260px); } to { transform: translateX(1140px); } }
+  .glow { animation: breathe 7s ease-in-out infinite; transform-origin: 754px 74px; }
+  @keyframes breathe { 0%, 100% { opacity: .14; transform: scale(1); } 50% { opacity: .24; transform: scale(1.07); } }
+  .star { animation: twinkle 4.2s ease-in-out infinite; }
+  @keyframes twinkle { 0%, 100% { opacity: .25; } 50% { opacity: .95; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+<g clip-path="url(#frame)">
+  <rect width="880" height="300" fill="url(#sky)"/>
+  <circle class="star" cx="92" cy="44" r="1.5" fill="#f0ecdc" style="animation-delay:0.0s"/>
+  <circle class="star" cx="168" cy="28" r="1.1" fill="#f0ecdc" style="animation-delay:1.3s"/>
+  <circle class="star" cx="243" cy="62" r="1.4" fill="#f0ecdc" style="animation-delay:2.6s"/>
+  <circle class="star" cx="318" cy="36" r="1.0" fill="#f0ecdc" style="animation-delay:0.7s"/>
+  <circle class="star" cx="402" cy="22" r="1.5" fill="#f0ecdc" style="animation-delay:3.1s"/>
+  <circle class="star" cx="486" cy="54" r="1.2" fill="#f0ecdc" style="animation-delay:1.9s"/>
+  <circle class="star" cx="566" cy="30" r="1.3" fill="#f0ecdc" style="animation-delay:0.4s"/>
+  <circle class="star" cx="648" cy="58" r="1.0" fill="#f0ecdc" style="animation-delay:2.2s"/>
+  <circle class="star" cx="712" cy="26" r="1.4" fill="#f0ecdc" style="animation-delay:1.1s"/>
+  <circle class="star" cx="798" cy="48" r="1.2" fill="#f0ecdc" style="animation-delay:2.9s"/>
+  <circle class="star" cx="846" cy="18" r="1.1" fill="#f0ecdc" style="animation-delay:0.9s"/>
+  <circle class="star" cx="58" cy="76" r="1.0" fill="#f0ecdc" style="animation-delay:3.4s"/>
+  <circle class="glow" cx="754" cy="74" r="84" fill="url(#glow)" opacity=".14"/>
+  <circle cx="754" cy="74" r="30" fill="#f6d072"/>
+
+  <g class="cloud" opacity=".9">
+    <ellipse cx="120" cy="58" rx="34" ry="15" fill="#1e2c36"/>
+    <ellipse cx="148" cy="50" rx="26" ry="18" fill="#1e2c36"/>
+    <ellipse cx="90" cy="52" rx="20" ry="13" fill="#1e2c36"/>
+  </g>
+  <g class="cloud" opacity=".65" style="animation-delay:-41s;animation-duration:96s">
+    <ellipse cx="400" cy="96" rx="28" ry="12" fill="#1e2c36"/>
+    <ellipse cx="422" cy="90" rx="20" ry="14" fill="#1e2c36"/>
+  </g>
+
+  <path d="M0 228 C 120 190, 232 224, 348 210 C 470 196, 566 230, 688 212 C 782 198, 838 214, 880 206 L880 300 L0 300 Z" fill="#163527"/>
+  <path d="M0 258 C 138 228, 268 264, 404 250 C 546 236, 650 268, 760 254 C 824 246, 856 256, 880 252 L880 300 L0 300 Z" fill="#1f4a33"/>
+  <path d="M0 290 C 160 274, 320 298, 496 286 C 664 274, 780 296, 880 288 L880 300 L0 300 Z" fill="#2a7444"/>
+
+  <g stroke="#6b5231" stroke-width="5" stroke-linecap="round">
+    <line x1="652" y1="252" x2="652" y2="288"/>
+    <line x1="716" y1="250" x2="716" y2="286"/>
+    <line x1="780" y1="252" x2="780" y2="288"/>
+    <line x1="844" y1="254" x2="844" y2="290"/>
+    <line x1="648" y1="260" x2="848" y2="258"/>
+    <line x1="648" y1="276" x2="848" y2="274"/>
+  </g>
+
+  <g transform="translate(430,214) scale(0.52)"><g class="sheep" style="animation-delay:0.0s">
+    <g fill="#0b1410"><rect x="40" y="52" width="8" height="21" rx="4"/><rect x="66" y="52" width="8" height="21" rx="4"/></g>
+    <path d="M40 20c6-9 22-10 28-2 10-3 19 4 18 13 7 4 7 15-1 19-2 8-12 11-19 8-8 5-21 4-26-3-10 1-17-7-15-16-4-8 4-18 15-19Z" fill="#f0ecdc" stroke="#0b1410" stroke-width="4" stroke-linejoin="round"/>
+    <ellipse cx="26" cy="34" rx="9" ry="7" transform="rotate(-28 26 34)" fill="#0b1410"/>
+    <ellipse cx="27" cy="48" rx="15" ry="14" fill="#0b1410"/>
+    <circle cx="22" cy="45" r="3" fill="#f0ecdc"/>
+    <circle cx="21.4" cy="45.6" r="1.4" fill="#0b1410"/>
+  </g></g>
+  <g transform="translate(512,206) scale(0.44)"><g class="sheep" style="animation-delay:1.2s">
+    <g fill="#0b1410"><rect x="40" y="52" width="8" height="21" rx="4"/><rect x="66" y="52" width="8" height="21" rx="4"/></g>
+    <path d="M40 20c6-9 22-10 28-2 10-3 19 4 18 13 7 4 7 15-1 19-2 8-12 11-19 8-8 5-21 4-26-3-10 1-17-7-15-16-4-8 4-18 15-19Z" fill="#f0ecdc" stroke="#0b1410" stroke-width="4" stroke-linejoin="round"/>
+    <ellipse cx="26" cy="34" rx="9" ry="7" transform="rotate(-28 26 34)" fill="#0b1410"/>
+    <ellipse cx="27" cy="48" rx="15" ry="14" fill="#0b1410"/>
+    <circle cx="22" cy="45" r="3" fill="#f0ecdc"/>
+    <circle cx="21.4" cy="45.6" r="1.4" fill="#0b1410"/>
+  </g></g>
+  <g transform="translate(590,214) scale(0.38)"><g class="sheep" style="animation-delay:2.1s">
+    <g fill="#0b1410"><rect x="40" y="52" width="8" height="21" rx="4"/><rect x="66" y="52" width="8" height="21" rx="4"/></g>
+    <path d="M40 20c6-9 22-10 28-2 10-3 19 4 18 13 7 4 7 15-1 19-2 8-12 11-19 8-8 5-21 4-26-3-10 1-17-7-15-16-4-8 4-18 15-19Z" fill="#f0ecdc" stroke="#0b1410" stroke-width="4" stroke-linejoin="round"/>
+    <ellipse cx="26" cy="34" rx="9" ry="7" transform="rotate(-28 26 34)" fill="#0b1410"/>
+    <ellipse cx="27" cy="48" rx="15" ry="14" fill="#0b1410"/>
+    <circle cx="22" cy="45" r="3" fill="#f0ecdc"/>
+    <circle cx="21.4" cy="45.6" r="1.4" fill="#0b1410"/>
+  </g></g>
+
+  <text x="54" y="138" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="88" font-weight="800" fill="#f0ecdc" text-anchor="start" textLength="196" lengthAdjust="spacingAndGlyphs">shep</text>
+  <rect x="58" y="160" width="186" height="7" rx="3.5" fill="#f6d072"/>
+  <text x="56" y="198" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="20" font-weight="600" fill="#bfcfc2" text-anchor="start">A process manager written in Rust.</text>
+  <text x="56" y="226" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="20" font-weight="600" fill="#bfcfc2" text-anchor="start">One shepherd keeps your flock alive.</text>
+</g>
+</svg>
