@@ -10,7 +10,7 @@
 <a href="https://crates.io/crates/shep"><img alt="downloads" src="https://img.shields.io/crates/d/shep?style=for-the-badge&label=downloads&color=6fcb6b&labelColor=17251c"></a>
 <a href="https://github.com/shep-pm/shep/actions/workflows/test.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/shep-pm/shep/test.yml?style=for-the-badge&label=CI&color=2a7444&labelColor=17251c"></a>
 <a href="https://shep-pm.com/docs"><img alt="docs" src="https://img.shields.io/badge/docs-shep--pm.com-f3c44c?style=for-the-badge&labelColor=17251c"></a>
-<a href="https://github.com/shep-pm/shep#license"><img alt="license" src="https://img.shields.io/crates/l/shep?style=for-the-badge&color=7a8c80&labelColor=17251c"></a>
+<a href="https://github.com/shep-pm/shep#license"><img alt="license" src="https://img.shields.io/badge/MIT%20OR%20Apache--2.0-17251c?style=for-the-badge"></a>
 </p>
 
 </div>
