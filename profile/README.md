@@ -10,7 +10,7 @@
 <a href="https://crates.io/crates/shep"><img alt="downloads" src="https://img.shields.io/crates/d/shep?style=for-the-badge&label=downloads&color=6fcb6b&labelColor=17251c"></a>
 <a href="https://github.com/shep-pm/shep/actions/workflows/test.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/shep-pm/shep/test.yml?style=for-the-badge&label=CI&color=2a7444&labelColor=17251c"></a>
 <a href="https://shep-pm.com/docs"><img alt="docs" src="https://img.shields.io/badge/docs-shep--pm.com-f3c44c?style=for-the-badge&labelColor=17251c"></a>
-<a href="https://github.com/shep-pm/shep#license"><img alt="license" src="https://img.shields.io/crates/l/shep?style=for-the-badge&label=license&color=7a8c80&labelColor=17251c"></a>
+<a href="https://github.com/shep-pm/shep#license"><img alt="license" src="https://img.shields.io/crates/l/shep?style=for-the-badge&color=7a8c80&labelColor=17251c"></a>
 </p>
 
 </div>
@@ -34,7 +34,7 @@ The face in the STATUS column is the fastest thing on the page to read:
 
 ## What's in the fold
 
-| | |
+| Repo | What it is |
 | :-- | :-- |
 | **[shep](https://github.com/shep-pm/shep)** | The process manager. Daemon, CLI, `lookout` (TUI), `whistle` (MCP server), and the client crates your app links against. |
 | **[shep-deploy](https://github.com/shep-pm/shep-deploy)** | A deploy dog. Watches a branch, builds a release, swaps to it, rolls back if it does not come up. |
@@ -69,7 +69,7 @@ ordinary binary, in whatever language you like.
 Fifteen of them carry the whole product. Every themed verb keeps a straight alias that
 works forever, and where the joke would cost clarity it gets dropped.
 
-| | | |
+| Term | What it means | What you type |
 | :-- | :-- | :-- |
 | **the flock** | Every managed process, as a set. Always the plural term. | `shep flock` · `list` · `ls` |
 | **a sheep** | One managed process. Singular only, so nothing is ambiguous. | `shep describe web` |
