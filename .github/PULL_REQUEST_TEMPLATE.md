@@ -23,6 +23,7 @@ docs updated:
 
 ## Before you ask for review
 
+- [ ] I can explain every line of this. Using an AI to write it is fine and common here. Opening a pull request you cannot answer questions about is not, whoever or whatever wrote it.
 - [ ] Every commit subject is a conventional one, `type(scope): summary`. release-plz reads individual commits and silently drops what it cannot parse, so an unreadable subject contributes nothing to the changelog and nothing to the version bump. Accepted types: `feat`, `fix`, `perf`, `refactor`, `docs`, `test`, `ci`, `chore`, `style`.
 - [ ] Anything that breaks a caller carries a `!`, on the commit that breaks it, in the crate that breaks. A `!` on this title is read by nobody.
 - [ ] `cargo fmt --all --check`
