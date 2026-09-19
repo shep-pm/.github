@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Documentation
+    url: https://shep-pm.com/docs
+    about: Verbs, Flockfile keys, JSON output and the migration guide from pm2.
+  - name: Security report
+    url: https://github.com/shep-pm/shep/security/advisories/new
+    about: Report a vulnerability privately rather than in a public issue.

@@ -1,0 +1,41 @@
+name: Docs problem
+description: Something at shep-pm.com, in a --help block, or in a README is wrong, stale, or missing.
+labels: ["area: docs"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The CLI reference pages are generated from the binary's own `--help`, so
+        a wrong verb or flag there is usually a bug in the source rather than in
+        the page. Say which you think it is if you know.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What is wrong
+      description: A few sentences, and where you were reading.
+    validations:
+      required: true
+
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: A URL, a repo-relative file path, or the command whose `--help` is wrong.
+      placeholder: "https://shep-pm.com/docs/from-pm2"
+    validations:
+      required: true
+
+  - type: textarea
+    id: precise
+    attributes:
+      label: Precise details
+      description: Read by automated tooling and by coding agents. Be exact rather than readable.
+      value: |
+        page:
+        says:
+        should say:
+        generated or hand written:
+        source file:
+    validations:
+      required: false

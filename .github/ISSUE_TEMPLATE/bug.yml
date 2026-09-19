@@ -1,0 +1,68 @@
+name: Bug report
+description: Something shep does that it should not, or does not do that it should.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Two parts below. The first is for people, the second is for the coding
+        agents and scripts that also read these issues. Both matter, and the
+        second one is where exact paths and line numbers go.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened
+      description: A few sentences. What you did, what you expected, what you got instead.
+      placeholder: |
+        `shep start` on a Flockfile with two apps brings up the first and
+        reports the second as online while it is not running.
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce it
+      description: The shortest sequence that shows the problem. A Flockfile or a config helps.
+      render: shell
+      placeholder: |
+        shep start ./Flockfile.toml
+        shep list
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Output of `shep --version`.
+      placeholder: "shep 0.8.4"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options: [macOS, Linux, Windows, Other]
+    validations:
+      required: true
+
+  - type: textarea
+    id: precise
+    attributes:
+      label: Precise details
+      description: |
+        Read by automated tooling and by coding agents, so be exact rather than
+        readable here. Repeat anything from above that is worth pinning down.
+        Repo-relative paths only, never a path out of your own home directory.
+      value: |
+        expected:
+        actual:
+        files:
+        sites:
+        error output:
+        workaround:
+    validations:
+      required: false
