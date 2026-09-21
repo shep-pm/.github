@@ -38,6 +38,7 @@ The face in the STATUS column is the fastest thing on the page to read:
 | :-- | :-- |
 | **[shep](https://github.com/shep-pm/shep)** | The process manager. Daemon, CLI, `lookout` (TUI), `whistle` (MCP server), and the client crates your app links against. |
 | **[shep-deploy](https://github.com/shep-pm/shep-deploy)** | A deploy dog. Watches a branch, builds a release, swaps to it, rolls back if it does not come up. |
+| **[shep-discord](https://github.com/shep-pm/shep-discord)** | A Discord dog. Streams a sheep's logs to a channel, drives the flock from slash commands. |
 | **[shep-log-rotate](https://github.com/shep-pm/shep-log-rotate)** | A log-rotation dog. Renames grown logs, asks the shepherd to reopen, then compresses and prunes. |
 | **[shep-go](https://github.com/shep-pm/shep-go)** | The Go client. Readiness, metrics and custom actions over the shepherd channel. |
 | **[homebrew-shep](https://github.com/shep-pm/homebrew-shep)** | The Homebrew tap, for macOS and Linux. |
