@@ -67,8 +67,9 @@ ordinary binary, in whatever language you like.
 
 ## The words
 
-Fifteen of them carry the whole product. Every themed verb keeps a straight alias that
-works forever, and where the joke would cost clarity it gets dropped.
+Twenty of them carry the whole product. Every themed verb keeps a straight
+alias that works forever, and where the joke would cost clarity it gets
+dropped.
 
 | Term | What it means | What you type |
 | :-- | :-- | :-- |
@@ -79,7 +80,7 @@ works forever, and where the joke would cost clarity it gets dropped.
 | **a fold** | A namespace or group of sheep. | `shep fold backend` |
 | **muster** | Bring a saved flock back after a reboot. | `shep save` · `shep muster` |
 
-[All fifteen terms →](https://shep-pm.com/docs/terminology)
+[All twenty terms →](https://shep-pm.com/docs/terminology)
 
 ## Where things stand
 
